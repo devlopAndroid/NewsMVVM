@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/breaking">
+
+    <fragment
+        android:id="@+id/breaking"
+        android:name="com.opentechspace.newsmvvm.ui.Fragment.Breaking"
+        android:label="breaking"
+        tools:layout="@layout/breaking" >
+        <action
+            android:id="@+id/action_breaking_to_detailsNews"
+            app:destination="@id/detailsNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/Search"
+        android:name="com.opentechspace.newsmvvm.ui.Fragment.Search"
+        android:label="search"
+        tools:layout="@layout/search" >
+        <action
+            android:id="@+id/action_Search_to_detailsNews"
+            app:destination="@id/detailsNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/Saved"
+        android:name="com.opentechspace.newsmvvm.ui.Fragment.Saved"
+        android:label="saved"
+        tools:layout="@layout/saved" >
+        <action
+            android:id="@+id/action_Saved_to_detailsNews"
+            app:destination="@id/detailsNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsNews"
+        android:name="com.opentechspace.newsmvvm.ui.Fragment.DetailsNews"
+        android:label="fragment_details_news"
+        tools:layout="@layout/fragment_details_news" >
+        <argument
+            android:name="article"
+            app:argType="com.opentechspace.newsmvvm.Model.Article" />
+    </fragment>
+</navigation>
